@@ -1,0 +1,91 @@
+Fix V4 toolchain complaints in ex_col_store example program WT-8530 MongoDB V4 toolchain can't build ex_col_store example program (#7299),1
+review clang analyzer warnings WT-8474 review clang analyzer warnings (#7251),1
+Move btree I/O functionality into the block-cache implementation WT-8466 Move btree I/O functionality into the block-cache implementation (#7248),1
+Remove leaf_item_max and internal_item_max configuration strings WT-8460 Remove leaf_item_max and internal_item_max configuration strings. (#7245),1
+Rename test_checksys() to test_assert_errno() WT-8459 rename test_checksys() to test_assert_errno() (#7244),1
+Add diagnostic logging code to the generation drain function WT-5204 Add diagnostic logging code to the generation drain function.,1
+Assert table cannot be NULL within config_table in test/format WT-8390 Assert table cannot be NULL within config_table in test/format (#7229),1
+Restructure the block cache WT-8273 Restructure the block cache (#7217),1
+Fix issues related to inheritance in the cpp testing framework WT-8116 Fix issues related to inheritance in the cpp testing framework (#7058),1
+Define macros only when necessary in cpp files WT-8115 Define macros only when necessary in cpp files (#7044),1
+"Add breakpoint to verify error macros, clean up API processing WT-8079 add breakpoint to verify error macros, clean up API processing",1
+Remove discrepancy between prefix_key and prefix_search WT-8070 Remove discrepancy between prefix_key and prefix_search (#7046),1
+Restore static testing that zero-length row-store values are never written WT-6457 Restore static testing that zero-length row-store values are never written. (#5833),1
+Rename *.i files into *_inline.h files WT-6446 Rename *.i into *_inline.h files (#6040),1
+Re-enable VLCS format stress testing in evergreen. Import wiredtiger: 38ddd74fc34c2603fd350c2175611241f5171ec4 from branch mongodb-master,1
+Re-enable FLCS tests in coverage report WT-8016 Re-enable FLCS tests in coverage report. (#7237),1
+Re-enable FLCS evergreen endianness tests WT-8015 Re-enable FLCS evergreen endianness tests. (#7236),1
+Re-enable FLCS smoke testing in format. WT-8013 Re-enable FLCS smoke testing in format. (#7235),1
+Add format support for randomly choosing RS or VLCS WT-8011 add format support for randomly choosing RS or VLCS (#6944),1
+sync/checkpoint cleanup code isn't appropriate for VLCS WT-8006 sync/checkpoint cleanup code isn't appropriate for VLCS (#6942),1
+Move WT_CONN_SERVER flags into their own field WT-6430 Move WT_CONN_SERVER flags into their own field. (#6264),1
+Remove lsm_merge configuration option WT-4969 remove lsm_merge option from wiredtiger config (#5036),1
+Restore format non-timestamp transactional testing WT-6403 restore format non-timestamp transactional testing  (#6509),1
+VLCS checkpoint and additional test suite improvements WT-7928 VLCS checkpoint and additional test suite improvements (#6870),1
+Remove unused WT_CURSTD_UPDATE_LOCAL flag WT-6387 WT_CURSTD_UPDATE_LOCAL flag is no longer used (#6472),1
+Make variable-length column store work again with the static tests WT-7908 Make variable-length column store work again with the static tests (#6853),1
+test suite cleanup WT-7901 test suite cleanup (#6846),1
+Fix clang testing in Jenkins Pull Request testing WT-4931 Fix clang testing in Jenkins Pull Request testing (#4769),1
+Remove comment that is no longer true WT-7871 Remove comment that is no longer true. (#6817),1
+Remove obsolete options from the wt verify API WT-6352 Remove obsolete options from the wt verify API (#5749),1
+Fix potential code caching/re-ordering issue in __search_insert_append WT-4909 Fix potential code caching/re-ordering issue in __search_insert_append (#4785),1
+Make tiered storage address cookies backward compatible WT-7817 make tiered storage address cookies backward compatible (#6774),1
+Add history store verification WT-6312 history store verification (#5720),1
+Add compatibility support for gcc-9 and clang-8  WT-4858 Clang 8 and GCC 9 compatibility (#4740),1
+Remove mutable read timestamp from transaction structure WT-6252 Remove mutable read timestamp from transaction structure (#5681),1
+Simplify insert splits to use the splitting WT_REFs key WT-7707 Simplify insert splits to use the splitting WT_REFs key (#6685),1
+Review time window validation WT-6190 review time window validation (#5649),1
+refactor rollback-to-stable to support operating on individual files WT-7680 refactor rollback-to-stable to support operating on individual files (#6660),1
+Remove support for Helium/Levyx data sources in WiredTiger WT-4765 Remove support for Helium/Levyx data sources in WiredTiger. (#4617),1
+reduce rollback-to-stable work for fast-truncate pages WT-7674 reduce rollback-to-stable work for fast-truncate pages (#6658),1
+Switch to a better timestamp and transaction ID ordering convention WT-4755 switch to a better timestamp and transaction ID ordering convention (#4604),1
+Change the checkpoint code to not require a list order WT-4754 change the checkpoint code to not require a list order.,1
+Strip the timing_stress configuration options from the base configuration WT-4753 timing_stress configuration options should be stripped from the base configuration file,1
+WiredTiger autoconfig check for the compiler incorrectly quoted WT-4752 WiredTiger autoconfig check for the compiler incorrectly quoted,1
+Change __wt_timestamp_to_string() to return a pointer to simplify verbose WT-4751 __wt_timestamp_to_string can return a pointer to simplify verbose message handling,1
+Remove the stop timestamp from the WT_UPDATE structure Import wiredtiger: d9ec69f9111b036ee0b19b47368e15bff8d4818d from branch mongodb-4.2,1
+Rework cell structures and unpacking WT-6111 rework cell structures and unpacking (#5624),1
+Move time windows and aggregated time windows into structures WT-6086 Create structures and helpers for time windows. (#5576),1
+"Remove log_flush(""sync=background"") support WT-7592 Remove support for WT_SESSION::transaction_sync and background sync. (#6831)",1
+column-store no longer needs to handle WT_COL page offsets of 0 WT-4705 column-store no longer needs to handle WT_COL page offsets of 0 (#4552),1
+Remove WT_UPDATE_RESTORED_FROM_DISK flag WT-6069 Remove WT_UPDATE_RESTORED_FROM_DISK flag (#5575),1
+Re-enable tests temporarily disabled during durable history development WT-6068 Re-enable tests temporarily disabled during durable history development (#5568),1
+Switch test/format to use WiredTiger locking primitives WT-4701 Switch test/format to use WiredTiger locking primitives (#5516),1
+Turn on mongodb-4.4 branch upgrade/downgrade testing WT-6032 turn on mongodb-4.4 branch upgrade/downgrade testing. #5591,1
+Remove legacy WT_PAGE_MODIFY.last_stable_timestamp WT-6031 WT_PAGE_MODIFY.last_stable_timestamp is no longer used. #5535,1
+__rec_append_orig_value() cleanup WT-6020 __rec_append_orig_value() cleanup (#5521),1
+Remove support for WiredTiger LevelDB APIs WT-4670 Remove support for WiredTiger LevelDB APIs (#4607),1
+Turn off format stress testing for column-store WT-6008 Turn off format stress testing for column-store. #5511,1
+"Update salvage for a history store and timestamp world WT-5828 reconciliation discards salvaged overflow blocks with stop time pairs (#5456)
+",1
+Allow single and double quotes inside auto-formatted comments WT-7506 Allow single and double quotes inside auto-formatted comments.,1
+"Turn off format testing for relaxed isolation levels WT-5985 WiredTiger does not currently support relaxed isolation levels, turn off format testing #5489",1
+Remove diagnostic tests left over from WT-5043 WT-5983 remove diagnostic tests left over from WT-5043 #5488,1
+Make the WT_SESSION_IMPL.txn field an allocated structure WT-5968 Allocate the WT_TXN structure when activating the WT_SESSION  (#5515),1
+Remove named snapshot support WT-5967 Remove named snapshot support #5480,1
+Don't reopens the tracking file on each call in test-utility-progress function WT-4628 WiredTiger test-utility-progress function reopens the tracking file on each call (#4512),1
+Update format to use the new history-store cursor type WT-7475 update format to use the new history-store cursor type,1
+Rework format CONFIG file syntax for clarity WT-5925 rework format CONFIG file syntax for clarity (#5455),1
+Simplify wt utility's session/connection handling WT-4596 The wt utility has unnecessarily complicated session/connection handling (#4490),1
+WT_CONN_DATA_CORRUPTION incorrectly set in Btree verify code. WT-4569 WT_CONN_DATA_CORRUPTION incorrectly set in Btree verify code. (#4472),1
+Compatibility with older versions of WT WT-5886 Compatibility with older versions of WT (#6366),1
+Consolidate capacity and block manager bytes written WT-4547 Remove redundant os_cache_dirty field. (#4465),1
+Compile wiredtiger under build_posix directory for Evergreen tests WT-4536 Compile wiredtiger under build_posix directory for Evergreen tests (#4445),1
+Remove skew_newest option from reconciliation WT-5794 Remove skew_newest option from reconciliation (#5528),1
+Support import of of standalone WiredTiger files. WT-4494 Support import of of standalone WiredTiger files. (#4517),1
+Update incorrect copyright notices format WT-7345 Fix incorrect and missing copyright notices (#6497),1
+lint WT-4482 lint (#4407),1
+Minimize testing that requires TESTUTIL_ENABLE_LONG_TESTS WT-4470 Minimize testing that requires TESTUTIL_ENABLE_LONG_TESTS (#4391),1
+Only pass a non-NULL WT_ITEM value when allocating a WT_UPDATE with associated data WT-5749 Only pass a non-NULL WT_ITEM value when allocating a WT_UPDATE with associated data (#5529),1
+Remove the WT_CURSOR_BTREE.btree field WT-5725 Remove the WT_CURSOR_BTREE.btree field. (#5641),1
+Review WT_PANIC usage WT-5710 Review WT_PANIC usage. (#5580),1
+Make WiredTiger timestamps always on and 8 bytes WT-4427 Make WiredTiger timestamps always on and 8 bytes (#4366),1
+Remove named snapshot support Import wiredtiger: 5b5d7988560a20dbe827a1fa16c0481e6c0e2821 from branch mongodb-4.4,1
+Update WiredTiger source code to include 2021 copyright notices WT-6926 2021 Copyright notices (#6351),1
+Remove WiredTiger raw compression support WT-4192 Remove WiredTiger raw compression support. (#4375),1
+Make format LSM test a separate Evergreen task WT-5405 Make format LSM test a separate Evergreen task (#5164),1
+Update WiredTiger source code to include 2020 copyright notices WT-5383 2020 Copyright notices (#5234),1
+Remove format's long-running transaction support WT-5365 Remove format's long-running transaction support. (#5077),1
+Lint fix: don't use error labels that do nothing other than return WT-4074 lint (#4090),1
+Format timestamps identically to MongoDB WT-5311 Format timestamps identically to MongoDB (#5027),1
+Restore assert that trees being discarded are not marked dirty WT-5260 Restore assert that trees being discarded are not marked dirty #5534,1

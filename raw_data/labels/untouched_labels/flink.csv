@@ -1,0 +1,563 @@
+Move FutureUtils to core moved FutureUtils into flink-core. It appears that we forgot to move the corresponding tests.master:,1
+"Refactor Core Options parent-first patterns to List options , may I volunteer and work on this issue? Hi, I have raised a PR for this refactoring, could you please take a look? will you be able to help review this PR? Merged via:",1
+"Reduce code duplication in AbstractYarnClusterDescriptor Can anyone assign this ticket to me? This issue and all of its Sub-Tasks have not been updated for 180 days. So, it has been labeled ""stale-minor"". If you are still affected by this bug or are still interested in this issue, please give an update and remove the label. In 7 days the issue will be closed automatically.This issue has been labeled ""stale-minor"" for 7 days. It is closed now. If you are still affected by this or would like to raise the priority of this ticket please re-open, removing the label ""auto-closed"" and raise the ticket priority accordingly. Re-opening in accordance with",1
+"Running HA per-job cluster (rocks, non-incremental) end-to-end test could not finished in 900 seconds I am the Flink Jira Bot and I help the community manage its development. I see this issues has been marked as Major but is unassigned and neither itself nor its Sub-Tasks have been updated for 30 days. I have gone ahead and added a ""stale-major"" to the issue"". If this ticket is a Major, please either assign yourself or give an update. Afterwards, please remove the label or in 7 days the issue will be deprioritized.This issue was labeled ""stale-major"" 7 ago and has not received any updates so it is being deprioritized. If this ticket is actually Major, please raise the priority and ask a committer to assign you the issue or revive the public discussion. In the logs it looks as if the last running TaskExecutor is killed for some reason other than the common_ha.sh#ha_tm_watchdog. That's also why no new TaskExecutor gets started. Maybe we can harden the common_ha. sh#ha_tm_watchdog by not requiring that the number of expected TMs runs before starting a new one but also starting new TaskExecutors if the number of TMs is below the expected number. Fixed via
+",1
+"Kafka At-Least-Once related IT cases are not activatedI've tried reactivating the two cases and they work fine for me locally. Maybe   can also share some insights, as one of the original contributors of? Fixed via",1
+Add assertj as dependency in flink-parentmaster,1
+Allow calls to @VisibleForTesting from inner classesmaster,1
+"Disable shading of test jars by default  do you have an idea what could cause this problem? When executing compile.sh locally, I could not reproduce the problem. However, when building flink-kubernetes, then I can create a test jar that contains classes and other things which could make the JarFileChecker fail. It's interesting that this only fails on Java 11. It is probably related to the shade-plugin bump in.",1
+Distributed e2e tests across 2 profilesmaster,1
+"Document new File formatsarvid can you assign the ticket to me please? Done thanks for taking care. thanks, my pleasure! I took a look at hive and orc new formats for documenting them and I realized that the factories are for table environment even constructors expect table parameters. Are they really intended/ready to be used with DataStream api? Or did I miss something? You are right that they currently cannot be used in DataStream. That was something that we originally planned for 1.15 but that has been pushed back. Resolved in master. Make new formats name coherent. document text file reading. document parquet file reading. Address review comments. Merged into as. Renaming was breaking API in 1.14 and master. partially reverted in. Master amended in",1
+Update JUnit5 to v5.8.1affe Feel free to also review the PR for this. Merged in master.,1
+Bump Powermock to v2.0.9 Merged in master,1
+Bump maven-dependency-plugin to 3.2.0 master,1
+Update nifi-site-to-site-client to v1.14.0 Merged in master,1
+Bump com.rabbitmq:amqp-client to v5.13.1cmick Would it also make sense to also pick up this one if you're going to work on the RabbitMQ test stability too? Merged in master:,1
+Bump commons-cli to v1.5.0 Merged into master ,1
+Exclude javadocs / node[_modules] directories from CI compile artifactmaster: ,1
+Bump test dependencies mariadb-java-client to 2.7.4 and mysql-connector-java to 8.0.27 Merged in master,1
+"Document solution for 'sun.misc doesn't exist' error with JDK 11Works just fine for me. I'd recommend to re-import the project.Thanks for your quick reply, I found that it may caused by the idea compiler option. I can work now after disable it. reference: . can you help make a check ? You can also refer to some information. I test by rm -rf flink-test-utils-parent/flink-test-utils-junit/target and run test with release  option enable it can reproduce the sun.misc not exist. Regarding the previous ticket to change the target to 8 , I think it make sense to support flink still run on jdk8, but can we support jdk11 bytecode default, and give an opt to let user to build a target 8 (because build with jdk11 produce jdk11 bytecode is the standard way, jdk11 target 8 is the compatible way ). I think, In this way this problem will disappear&gt; can we support jdk11 bytecode default. No. We had that before and it slowed down development. Since Java8 bytecode is the canonical form of Flink releases at this time it makes sense in any case to always build Java8 bytecode. If you want to build Java11 bytecode, then you can activate the java11-target profile.Get it, thanks for explanation   . May be I met the problem because I have develop with jdk11, and it conflicts with the --release flag when run test in IDE. Do we need to add the note to doc that when we use jdk11 as project SDK, we should disable --release compiler to run test in IDE.We should actually look into why things don't work with the --release flag, because that is the correct way to build for an older Java version.Ah, you can't use --release with --add-exports, which we unfortunately still need.Sure we can document it here.The reason can refer to JEP-247. I can do a favor to open a PR for this. master ",1
+"Update testcontainers dependency to v1.16.2 Fixed in master: Fixed in release Can we also backport the change to the release-1.13 branch? We are also hitting the container did no start problem I'll create the backport is there, let's wait for the CI to turn greenMerged: release",1
+"Update testcontainers dependency to v1.16.2Fixed in master: Fixed in release-1.14: Can we also backport the change to the release-1.13 branch? We are also hitting the container did no start problem I'll create the backport is there, let's wait for the CI to turn greenMerged:",1
+Update Cython to the latest versionMerged to master via ,1
+Update japicmp jaxb dependenciesmaster: Reverted in .Updated dependencies are not compatible with the current version of the japicmp plugin.,1
+Remove flink-runtime-web dependency from flink-testsmaster: ,1
+Update Postgres test dependencies to Fixed in master: ,1
+Update AVRO dependency to latest versio    ,1
+Update multiple Jackson dependencies to Fixed in master ,1
+Move scalastyle execution to validation phasemaster ,1
+Update Presto Hadoop dependency to latest versionMerged in master ,1
+"Elasticsearch6DynamicSinkITCase.testWritingDocuments fails when submitting jobTest debug build here: This issue is assigned but has not received an update in 7 days so it has been labeled ""stale-assigned"". If you are still working on the issue, please give an update and remove the label. If you are no longer working on the issue, please unassign so someone else may work on it. In 7 days the issue will be automatically unassigned. This issue was marked ""stale-assigned"" 7 ago and has not received an update. I have automatically removed the current assignee from the issue so others in the community may pick it up. If you are still working on this ticket, please ask a committer to reassign you and provide an update about your current status.I am the Flink Jira Bot and I help the community manage its development. I see this issues has been marked as Major but is unassigned and neither itself nor its Sub-Tasks have been updated for 30 days. I have gone ahead and added a ""stale-major"" to the issue"". If this ticket is a Major, please either assign yourself or give an update. Afterwards, please remove the label or in 7 days the issue will be deprioritized.This issue was labeled ""stale-major"" 7 days ago and has not received any updates so it is being deprioritized. If this ticket is actually Major, please raise the priority and ask a committer to assign you the issue or revive the public discussion. Looking at this test failure two things are interesting:
+
+1) The tests don't configure a parallelism. That's why we run a job with a parallelism of 32. This slows down the execution.
+2) The execution is not super fast on the CI infrastructure. That's why we run into the 10s akka.ask.timeout.
+
+I would suggest two things:
+
+1) Configuring a lower parallelism to reduce the complexity of the test.
+2) Set a higher default akka.ask.timeout when using the MiniCluster. This should also solve a lot of other test instabilities that are caused by timeouts due to slow CI infrastructure.For the 2) point I've created FLINK-23906.,1
+Java 11 profile should target JDK 8master:,1
+""flink-rpc-akka uses wrong Scala version property for parser-combinatorsmaster:",1
+Build archetype jars in compile phasemaster:,1
+flink-yarn-tests should copy examples after package phasemaster:,1
+flink-rpc-akka-loader does not bundle flink-rpc-akkaThe PR didn't get linked with this issue for some reason. Here it is ,1
+"Bump Testcontainers to 1.16.0Most probably could be fixed via FLINK-22386 Exactly. Thanks for the pointer. I wasn't aware of. I am the Flink Jira Bot and I help the community manage its development. I see this issues has been marked as Critical but is unassigned and neither itself nor its Sub-Tasks have been updated for 14 days. I have gone ahead and marked it ""stale-critical"". If this ticket is critical, please either assign yourself or give an update. Afterwards, please remove the label or in 7 days the issue will be deprioritized.This issue was labeled ""stale-critical"" 7 days ago and has not received any updates so it is being deprioritized. If this ticket is actually Critical, please raise the priority and ask a committer to assign you the issue or revive the public discussion. Shall we back port this to 1.13/1.12? We are having instabilities due to the same problem there. I'll look into it",1
+Migrate to flink-shaded-force-shadingmaster:,1
+"FallbackAkkaRpcSystemLoader should check for maven errorsFrom the error msg, it seems caused by classloader problem. If I execute the mvn package -pl flink-rpc/flink-rpc-akka,flink-rpc/flink-rpc-akka-loader to generate flink-rpc-akka.jar , the test will passed.More information about local debug the two case:
+
+Debugging this case, I found that the new created submodule classloader only contains the dependency of flink-rpc-akka.jar, which does not contain RpcSystem.class. In the phase of loadClass of AkkaRpcSystem, it will try to load it's parent class, then fails with ClassNotFoundException using submodule classloader, because the RpcSystem.class is not in flink-rpc-akka.jar. Then it will be loaded by ownerClassLoader (AppClassLoader) successfully.
+
+After that loaded inherited from It can pass when check I am a little confused here about how does two class loaded by different classloader can work with isAssignableFrom, but it works. please give me some hints, if you have idea    .
+
+2. add a test dependency on the flink-rpc-akka-loader test-jar.
+
+It adds the flink-rpc-core to Submodule classloader classpath, so when load AkkaPrcSystem, it will reload the RpcSystem with SubmoduleClassloader, which lead to the *not a subtype* exception above.
+
+BTW, the case fails here 
+
+Finally, It turns out that it's my fault lead to this (I change the workingDirectory to the parent dir) before copy-dependencies, so it add more unrelated jar to submodule classpath  
+
+But I still have two concerns here.
+
+1. It's default use the mvn command to execute, I have an alias for this, so I encountered this problem, may be we could add a check exitcode after execute copy-dependencies ?
+  
+ 2. Why use copy-dependencies instead of mvn clean package to build a fat jar?
+
+Please take a look when you are free cc  
+
+ 1) yes, we can make it more obvious why it failed.
+
+2) because copy-dependencies is the simpler approach. package could fail due to various plugin checks (which we could disable), would run tests (which we could disable), and has no side-effects on the currently compiled code.Thanks for your detail explanation. I think I can volunteer to add more information when downloadDependencies failed. I have created the pull request, please help review when you are free. master ",1
+Move RPC System packaging to package phasemaster,1
+"Upgrade Confluent Platform OSS version in end-to-end testsWhy is it a problem to use the 2.11 version?We're using the 2.11 version of Confluent Platform but are testing with the 2.12 Kafka distribution""
+
+And why is that a problem?Isn't it better to use the same Scala version for multiple components in an integration test? It depends. This is only a concern if they are put on the same classpath (not the case) or expose Scala details in the API (AFAIK also not the case).
+
+I can't think of another case where we'd want to align the Scala versions.OK. I think we still have to upgrade the Confluent Platform version, because we're using version 5.0.0 which doesn't support Kafka 2.2.x according to, while we do use that Kafka version in the test.
+
+Version 5.2.x has both a 2.11 and 2.12 version, so there's a choice to make. master: ",1
+"Upgrade KryoSerializer snapshot to implement new TypeSerializerSnapshot interfaceThis issue is assigned but has not received an update in 7 days so it has been labeled ""stale-assigned"". If you are still working on the issue, please give an update and remove the label. If you are no longer working on the issue, please unassign so someone else may work on it. In 7 days the issue will be automatically unassigned.As part of the ""Task"" Issue Type is removed. I moved this ticket to ""Technical Debt"", but did not look at it in detail. I have automatically removed the current assignee from the issue so others in the community may pick it up. If you are still working on this ticket, please ask a committer to reassign you and provide an update about your current status.I am the Flink Jira Bot and I help the community manage its development. I see this issues has been marked as Major but is unassigned and neither itself nor its Sub-Tasks have been updated for 30 days. I have gone ahead and added a ""stale-major"" to the issue"". If this ticket is a Major, please either assign yourself or give an update. Afterwards, please remove the label or in 7 days the issue will be deprioritized.This issue was labeled ""stale-major"" 7 days ago and has not received any updates so it is being deprioritized. If this ticket is actually Major, please raise the priority and ask a committer to assign you the issue or revive the public discussion.",1
+Add a fallback AkkaRpcSystemLoader for tests in the IDEmaster:,1
+"PulsarSourceITCase fails due to port conflictI can help fix the issue,maybe we should use dynamic port 0 as pulsar broker server port and web portxmarker Yep, you are right.  Can we also backport this to the 1.14.1 release?Thanks for providing the PR, xmarker. I've assigned you to this ticket.
+
+syhily, if this also affects the 1.14 release, we should for sure backport the ",1
+"Remove NetworkStackThroughputITCaseIn flink-tests there is a package called org.apache.flink.test.manual, which already has some benchmarks, which can be run manually. Maybe this one could be moved there too.We also have flink-tests/src/test/java/org/apache/flink/test/state/ManualWindowSpeedITCase.java. Agree that this is an anti-pattern and vote to either remove or establish a ""benchmark"" module.Agree, I think move these tests to org.apache.flink.test.manual under flink-tests is a good idea. Is this still open？till.rohrmannI think moving it to the manual package would only slightly improve things and the proper solution would be to have a benchmark module.till.rohrmann Absolutely, in the long run it's a better solution to create a benchmark module. I have submited a PR:",1
+Remove unused ContainerOverlays  Would you assign this to me?master: ,1
+Test service entries cause noise in other testsmaster: Extension added: REST tests migrated:,1
+Building a fresh clone with latest Maven failsAnother reference: Note that we generally encourage developers to use Maven 3.2.5 because the shading behavior is incorrect in later versions.,1
+"fails on Azurecc Unfortunately, logs look pretty fragmented (I don't see the part of the logs related to this test or this test class). But I see in the test that we request the available port(`NetUtils.getAvailablePort()`) and then we try to connect to this port and assume that we will fail because nobody listens to this port. But since we don't lock this port anyhow I assume that it is possible if somebody else from another test starts to listen to this port and our connection would be successful which can exactly lead to the problem which we see.
+Perhaps, it is not a bad idea to rewrite this code in such a way that we create our own server which would fail all input requests explicitly instead of relying on the random unbusy port.
+I think this makes sense.",1
+Update documentation links to point to nightlies.apache.orgmaster: I will limit this ticket to 1.13+ because there we actually seem to need it (Hugo doesn't render things properly without). The older jekyll-based docs work fine.,1
+"DefaultDispatcherRunnerITCase hangs on azureI am the Flink Jira Bot and I help the community manage its development. I see this issues has been marked as Major but is unassigned and neither itself nor its Sub-Tasks have been updated for 30 days. I have gone ahead and added a ""stale-major"" to the issue"". If this ticket is a Major, please either assign yourself or give an update. Afterwards, please remove the label or in 7 days the issue will be deprioritized.This issue was labeled ""stale-major"" 7 ago and has not received any updates so it is being deprioritized. If this ticket is actually Major, please raise the priority and ask a committer to assign you the issue or revive the public discussion.",1
+"Remove legacy slotmanagement profileThis major issue is unassigned and itself and all of its Sub-Tasks have not been updated for 30 days. So, it has been labeled ""stale-major"". If this ticket is indeed ""major"", please either assign yourself or give an update. Afterwards, please remove the label. In 7 days the issue will be deprioritized.This issue was labeled ""stale-major"" 7 ago and has not received any updates so it is being deprioritized. If this ticket is actually Major, please raise the priority and ask a committer to assign you the issue or revive the public discussion.  can we do this now?yesmaster: Hi,   and  . Does this mean we want to clean up the legacy code of SlotManagerImpl in 1.14?  yes, see ",1
+Move ZooKeeperUtilTest to right placeFixed via,1
+Remove unused ZooKeeperUtilityFactory and clean up ZooKeeperUtilTestmaster:,1
+"fails due to Service temporarily unavailable due to an ongoing leader election.
+
+1.14: ",1
+"Reuse the code of 'check savepoint preconditions'.jark dianfu  Could you help me to review this PR ? Thank you very much.Maybe someone from runtime component could help to review this. Thanks jark for the reply.
+
+
+Hi, Could you help me to review it  if you have free time? Thank you.Very thanks RocMarshal for the pr, merged on master via",1
+"Remove  and   can I take the task ? Sure, I've assigned you., I made this ticket a blocker because we want to fix it for the 1.14 release so that we can get rid of the legacy code. The idea is to not forget about it.
+1, fix test case 
+2, fix checkstyle I am the Jira Bot and I help the community manage its development. I see this issue is assigned but has not received an update in 14, so it has been labeled ""stale-assigned"".
+If you are still working on the issue, please remove the label and add a comment updating the community on your progress.  If this issue is waiting on feedback, please consider this a reminder to the committer/reviewer. Flink is a very active project, and so we appreciate your patience.
+If you are no longer working on the issue, please unassign yourself so someone else may work on it. If the ""warning_label"" label is not removed in 7 days, the issue will be automatically unassigned.This issue was marked ""stale-assigned"" 7 ago and has not received an update. I have automatically removed the current assignee from the issue so others in the community may pick it up. If you are still working on this ticket, please ask a committer to reassign you and provide an update about your current status. Fixed via",1
+"Queryable state with TM restart end-to-end test fails on azure,
+This starts appearing since yesterday. It might relates to .Hmm, it looks as if the restored job has fewer state items than before. I am not sure how this can happen. Maybe this is related to queryable state's broken semantics. I don't think that this has been caused by FLINK-23097.
+
+I will add a bit more logging information so that we might figure this out with the next test failure. Added more debug logs via
+
+Once the test case is fixed/hardened, can be reverted. This is very strange. In the logs it looks as if we are writing a checkpoint a map with 6 entries. However, when recovering, then we only recover a map with 5 entries. I am not sure how this can happen. Maybe this is more of RocksDB state backend problem. yunta have you seen something like this before?
+
+The first TaskManager prints that it has completed a checkpoint with a map of 6 entries.
+
+
+However, when recovering the state we only have 5 entries left:
+
+The fewer entries could be caused that we count the events in the open method where we haven't set a proper key yet?On the other hand, when accessing the MapState in the open method, then we should set an empty prefixBytes which should give us all RocksDB entries. Hence, we should actually get the same count on open as what we had when creating the latest checkpoint.
+
+One more addition: We seem to use unaligned checkpoints. But I don't think that this has something to do with the test failure.Stupid me: I think I know what the problem is. With FLINK-23097 I changed that we only output the number of elements once the checkpoint is completed. However, I did not output the number of entries at the point in time when the checkpoint was taken but when the notifyCheckpointComplete message arrived. This means that the number of entries could have grown and, thus, we are reporting wrong values.",1
+"Add e2e test for native Kubernetes HAWe already have some IT cases for the critical methods. Then we just need to add a E2E test in this issue.
+
+
+# Run the ITCases
+
+fly_in_gis so what needs to be done in this issue given that we already have the other tests? Should we extend the   tests to also run the tests on K8s?Actually, the above IT cases does not contain a E2E test, including Flink CLI job submission, kill the JobManager and check whether the Flink job could recover from latest checkpoint successfully. It is really a basic Kubernetes HA behavior test and could help us to keep it is always not broken.
+
+ 
+
+For the   tests, I am not aware of this module before and will learn more about it. I think it makes sense to me to let it also work on Kubernetes.Since we are not allowing to add new bash based e2e&#91;1&#93;, I will attach my previous PR to verify the Kubernetes HA functionality works well. It does not need to be merged. And I think we could refactor it with all other K8s bash based e2e tests to java e2e framework in the next release cycle. Is related? seems the ticket is closed now. I've also tried some e2e test on my local machine with Kind cluster. After killing the master node, it seems the checkpoints are starting off where it left off
+
+I'll share the test result here if I can later. I've got many mock infra connected as well like S3 mock and a single broker Kafka.ksp0422 Do you mean that you kill the JobManager and the new JobManager could not recover from the latest successful checkpoint? Please share us more input if you could.
+
+If it is really a valid issue, we could reopen the ticket.fly_in_gis No I meant it's working well in natvie. That's why I said it seem to start off from the last checkpoint. I haven't tested on standalone clusterGreat. Thanks for testing the Kubernetes HA service and sharing your experience.This issue is assigned but has not received an update in 7 days so it has been labeled ""stale-assigned"". If you are still working on the issue, please give an update and remove the label. If you are no longer working on the issue, please unassign so someone else may work on it.  ",1
+"The problem seems to be caused by the 1s heartbeat timeout that can also happen when the TaskExecutor process is started and before it is terminated on our CI. I think the only viable option I currently see is to increase the heartbeat timeout to 5s or 10s. The downside is that this test will then take at least 5s/10s.Well, actually we can leverage FLINK-23209 for faster detection of dead TMs. Fixed via",1
+"Type Migration: introducing primitive functional interfacesThe idea is neat but it is a bit hard to judge whether it would get merged without seeing a PR. You can open one if you wish.
+
+Considering that you claim this will improve performance, how do you intend to measure the actual impact on Flink? Do you expect us to verify that? Based on the examples you gave I would expect the impact to be minimal.
+
+Just to manage expectations: The project is currently busy preparing the next release so any review/merge may take a bit.",1
+"Fix typos Hi,  
+Excuse me for taking up your time.
+I created pull request for this issue.
+Would you like to review it for me.
+If there is any problem, please inform me in time. 
+I will actively revise it in time.
+Thank you very much!",1
+"due to the heartbeat exception with Yarn RM I am the Flink Jira Bot and I help the community manage its development. I see this issues has been marked as Critical but is unassigned and neither itself nor its Sub-Tasks have been updated for 7 days. I have gone ahead and marked it ""stale-critical"". If this ticket is critical, please either assign yourself or give an update. Afterwards, please remove the label or in 7 days the issue will be deprioritized.This issue was labeled ""stale-critical"" 7 ago and has not received any updates so it is being deprioritized. If this ticket is actually Critical, please raise the priority and ask a committer to assign you the issue or revive the public discussion. I might be wrong, but I have a feeling it fails more often with the adaptive scheduler: The InterruptedIOException is expected. It can happen if AMRMClient happens to be waiting for a heartbeat response when the cluster is shutdown.
+I'll add it to the whitelist for the log prohibited string checking. Fixed via
+Instance on 1.12:
+New instance in 1.12.",1
+"due to the heartbeat exception with Yarn RM I am the Flink Jira Bot and I help the community manage its development. I see this issues has been marked as Critical but is unassigned and neither itself nor its Sub-Tasks have been updated for 7 days. I have gone ahead and marked it ""stale-critical"". If this ticket is critical, please either assign yourself or give an update. Afterwards, please remove the label or in 7 days the issue will be deprioritized.This issue was labeled ""stale-critical"" 7 ago and has not received any updates so it is being deprioritized. If this ticket is actually Critical, please raise the priority and ask a committer to assign you the issue or revive the public discussion. I might be wrong, but I have a feeling it fails more often with the adaptive scheduler: The InterruptedIOException is expected. It can happen if AMRMClient happens to be waiting for a heartbeat response when the cluster is shutdown.
+I'll add it to the whitelist for the log prohibited string checking. Fixed via
+Reopen to port the fix to 1.12.
+
+Instance on 1.12: Reopening.
+
+New instance in 1.12.",1
+"Add contract in `LookupableTableSource` to specify the behavior when lookupKeys contains nullcc     Consider the temporal join sql: 
+
+
+If we remove ""for system_time as of T.proction"", it is a regular inner join.
+
+So in my opinion, The way to handle null values should be consistent with regular inner join.
+
+The point #1 and #2 sounds weird.
+
+If user really want point #2, I think we can support ""filterNulls"" to temporal join. Like: I agree your point, however I think when T.id is null, we should not send request to DimensionTable to lookup datas, it's responsibility of LookupJoin operator to handle the case instead of Dimension connector. please see a relative jira
+
+It's better add a contract in `LookupableTableSource ` explicity to avoid eliminate ambiguity.&gt; however I think when T.id is null, we should not send request to DimensionTable to lookup datas, it's responsibility of LookupJoin operator to handle the case instead of Dimension connector. 
+
+Yeah, this is not behavior of temporal join, this is the bug in our internal implementation.
+
+Just like regular join, StreamExecLookupJoin/BatchExecLookupJoin should deal with filterNulls and decide whether filter nulls outside connectors.After discuss with jark lzljs3620320 lic, we got the following conclusion:
+1. LookupJoin does not support JoinCondition like 'L.a is not distinct from R.a' and other similar ( 'L.a = R.a or (L.a is null And R.a is null)'), which leads to filterNulls contains false in 1.9 version. Would be fixed in 1.10 version
+2. Add contract in `LookupableTableSource` to specify the behavior when lookupKeys contains null, it behaviors like point 2 in the jira content
+3. Update `JdbcLookUpFunction` based on ad.2.
+
+Correct me if the conclusion is wrong.This issue is assigned but has not received an update in 7 days so it has been labeled ""stale-assigned"". If you are still working on the issue, please give an update and remove the label. If you are no longer working on the issue, please unassign so someone else may work on it. In 7 days the issue will be automatically unassigned.As part ofthe ""Task"" Issue Type is removed. I moved this ticket to ""Technical Debt"", but did not look at it in detail.   I have automatically removed the current assignee from the issue so others in the community may pick it up. If you are still working on this ticket, please ask a committer to reassign you and provide an update about your current status.I am the Flink Jira Bot and I help the community manage its development. I see this issues has been marked as Major but is unassigned and neither itself nor its Sub-Tasks have been updated for 30 days. I have gone ahead and added a ""stale-major"" to the issue"". If this ticket is a Major, please either assign yourself or give an update. Afterwards, please remove the label or in 7 days the issue will be deprioritized.This issue was labeled ""stale-major"" 7 days ago and has not received any updates so it is being deprioritized. If this ticket is actually Major, please raise the priority and ask a committer to assign you the issue or revive the public discussion. ",1
+"KafkaTableITCase hang. am the Flink Jira Bot and I help the community manage its development. I see this issues has been marked as a Blocker but is unassigned and neither itself nor its Sub-Tasks have been updated for 1 days. I have gone ahead and marked it ""stale-blocker"". If this ticket is a Blocker, please either assign yourself or give an update. Afterwards, please remove the label or in 7 days the issue will be deprioritized.
+Could you help look into this? It seems recent instances are no longer caused by the Testcontainers framework.I checked the log of latest 2 failure cases. I think this case has the same cause as FLINK-22416 as described in my comment. 
+
+I think we need more information for debugging, since Kafka is running in docker so I have no clue about what happened on broker side. I can submit a patch to log more information for debugging if the test fails.Thanks,  . 
+Adding more logs sounds good to me. I'm assigning you to this ticket for the moment.This is another instance from my own Azure pipeline, which proved my assumption before in
+
+Basically I add a timer to print Kafka topic partition status if the test hangs for 5 minutes. And the log showed that the starting offset of the partition is not 0, so test hanged because it couldn't receive expected messages with offset 0-3.  
+
+
+I'm still investigating why this could happen on broker side. Here is a PR for redirecting KafkaContainer's output to log4j and printing log if test hangs:
+
+ The blocked stack of this issue is the same with FLINK-22387, I think they have same root cause. Thanks   for the investigation. 
+Add logs in master have taken a look at the test code and related logs (not including the Kafka Server log). 
+
+Here are the findings:
+My hypothesis is that the log rolling happens because the current_time - timestamp_of_produced_records &gt;= retention_time. This might happen if the clock on the host that produces messages is several days earlier than the clock on the host that runs the Kafka Server container. In general this difference in clock is unlikely, because I find it even less likely to believe other reasons that could have causes this logStartOffset=4.
+
+In order to validate the hypothesis and move forward in the debugging, we have updated Flink code to get Kafka Server info level logging and will check the following:
+
+	What is the timestamp of the producer and Kafka Server in the log?
+	Does Kafka Server actually roll the log, and what even has triggered the log rolling?
+   
+I think the latest instance occurred after the log changes being merged. Could you help take another look? ,
+BTW, please move the ticket to in-progress as we're investigating it.Thanks   for the reminder. I had a discussion with   and we checked the log of the latest instance. These logs caught our attention: 
+
+
+Basically a retention time based log deletion was triggered, so messages written to Kafka is deleted, then the test case hanged because it cannot receive expected messages. These logs proves the hypothesis made by   that the clock is skewed on producer side. We are still investigating the reason and will update the comment once we have progress. 
+
+ 
+
+I don't have the permission to change the state of this ticket.   Could you help to change it to in-progress? Thanks~ Thanks for the updates.
+
+I don't have the permission to change the state of this ticket. Song Could you help to change it to in-progress? Thanks~ 
+
+Only the assignee can do it. There is a problem in jira that a `user` can be assigned to the ticket but cannot move it to in-progress, unless he/she is a `contributor`. I've grant you the `contributor` permission. You should be able to do it now.Here are my findings regarding why the timestamp of the produced record is more than 7 days earlier than the test time:
+
+1) KafkaWriter will explicitly assign the timestamp to the produced record, rather than using the system current time for the produced request.
+2) The timestamp could be from the StreamRecord that fed to the   method, which in turn is determined by the caller of those method (e.g. SQL related logic).
+3) The code used to produce records in the explicitly assigns some timestamp with date such as. This seems to be the only place where a non-current-system-time timestamp could be provided.
+
+My hypothesis is this:
+
+	The timestamp used in the test has been used as the timestamp of the records sent to Kafka.
+	The test will fail if and only if Kafka Server happens to trigger log retention logic (which is triggered at regularly time interval) after the records are produced but before the records have been consumed. This explains why the test is flaky.
+
+
+
+I would suggest to involve the developer who knows the expected behavior of the SQL/Table API tested by this test to validate the hypothesis described above.
+
+  Do you know who can help answer the SQL related questions? Thanks   for the investigation! Yes there are indeed some Kafka table test cases explicitly assigning record timestamp, such as this one&#91;1&#93;. These cases tests metadata column feature of Kafka sink table so I think we have to keep them. 
+
+I would suggest to disable log deletion by setting Kafka broker conf log.retention.ms to -1 in KafkaTableTestBase. This will prevent records from being delete. I can submit a patch to fix this. Thanks for the investigation,   and  .
+
+ , I think disabling log deletion is indeed one way to go. As a non-expert in Kafka, my question is would our IT cases may fail to capture potential problems that only happens when there's a regular log deletion, which IIUC is the default Kafka behavior.
+
+twalthr, fsk119, what do you think as the original authors?What's the default value of log.retention.ms?  jark The default value is 7 days. The problem is that some cases hard-coded the record timestamp (e.g. 2020-03-08, which is definitely beyond the retention timeout), so it's possible that these records are deleted by Kafka broker after being produced but before being consumed as   mentioned. 
+
+Maybe a better solution is using current timestamp in tests instead of hard-coding one. Changing the log.retention.ms indeed changes the default behavior of Kafka. Thanks   and   for the feedback.Thanks for the investigation.
+
+In the UpsertKafkaTableCase, we use the hard-coding timestamp to simplify the test(e.g. testTemporalJoin). I think it's okay to just turn off the log retention because users will not send out-of-date records in the production environment and they will not meet the problem.Hey fsk119, do you think it would be simpler to just change the timestamp used in the test to e.g. year 2030?
+
+I personally think this approach is better than disabling the log retention time. The reason is that we in general prefer the test to simulate the production environment, which do have the log retention in Kafka. I share the concern with   that, there might be potential problems that only happens when there's a regular log deletion. Sounds great. I think it's much better than turn off the log retention =-=.   , personally, I'm -1 to change the test data because
+
+1) it's hard to maintain, it's very trick to know which timestamp data should use a future time. See the pull request changes 136 lines, but there still some other timestamp not changed, not sure whether it changes all the necessary places. 
+2) it may still broken in the future, e.g. some one add a test but not use a long future timestamp (the test won't broken in a long time, and we need another round to investigate the problem when it fails). 
+3) I don't see big difference between changing the timestamp data and disabling log retention time. Is it common to insert 100 years later timestamp in production environment? 
+4) It seems we also changed some default configs for kafka tests, e.g. enable.auto.commit, auto.offset.reset in KafkaSinkITCase and KafkaWriterITCase.jark Thanks for pointing this out! To be honest I have no preference on these two options. Both of them have their pros and cons. I would suggest that we leave a descriptive comment around the change to make it easy to maintain for other developers.Fixed in master: 7814ee257b526d52f80a17143e228fb936b03ff5Please reopen it if the problem happens again.Instance on 1.13: I've reopened the ticket and downgraded it to Critical. Please back port the fix to
+The docker-based test is introduced in 1.13, so we may need another pull request for release-1.12. Could you help for that  ?",1
+"KafkaTableITCase hang.I am the Flink Jira Bot and I help the community manage its development. I see this issues has been marked as a Blocker but is unassigned and neither itself nor its Sub-Tasks have been updated for 1 days. I have gone ahead and marked it ""stale-blocker"". If this ticket is a Blocker, please either assign yourself or give an update. Afterwards, please remove the label or in 7 days the issue will be deprioritized.
+Could you help look into this? It seems recent instances are no longer caused by the Testcontainers framework.I checked the log of latest 2 failure cases. I think this case has the same cause as FLINK-22416 as described in my comment. 
+
+I think we need more information for debugging, since Kafka is running in docker so I have no clue about what happened on broker side. I can submit a patch to log more information for debugging if the test fails.Thanks,  . 
+Adding more logs sounds good to me. I'm assigning you to this ticket for the moment.This is another instance from my own Azure pipeline, which proved my assumption before in FLINK-22146:
+
+Basically I add a timer to print Kafka topic partition status if the test hangs for 5 minutes. And the log showed that the starting offset of the partition is not 0, so test hanged because it couldn't receive expected messages with offset
+
+I'm still investigating why this could happen on broker side. Here is a PR for redirecting KafkaContainer's output to log4j and printing log if test hangs:
+
+ The blocked stack of this issue is the same with, I think they have same root cause. Thanks   for the investigation. 
+
+logs in master I have taken a look at the test code and related logs (not including the Kafka Server log). 
+
+Here are the findings:
+
+	According to the test code and the log, 5 minutes after the test starts, the logStartOffset=4 and the logEndOffset=4.
+	According to the Kafka Source code, the logStartOffset will increase from 0 to 4 only in the following cases:
+	The is invoked by test code
+	The log rolling happens because the current_time - timestamp_of_produced_records &gt;= retention_time
+	The log rolling happens because the size of the log.
+
+
+
+My hypothesis is that the log rolling happens because the current_time - timestamp_of_produced_records &gt;= retention_time. This might happen if the clock on the host that produces messages is several days earlier than the clock on the host that runs the Kafka Server container. In general this difference in clock is unlikely, because I find it even less likely to believe other reasons that could have causes this logStartOffset=4.
+
+In order to validate the hypothesis and move forward in the debugging, we have updated Flink code to get Kafka Server info level logging and will check the following:
+
+	What is the timestamp of the producer and Kafka Server in the log?
+	Does Kafka Server actually roll the log, and what even has triggered the log rolling?
+I think the latest instance occurred after the log changes being merged. Could you help take another look? ,
+BTW, please move the ticket to in-progress as we're investigating it.Thanks   for the reminder. I had a discussion with and we checked the log of the latest instance. These logs caught our attention: 
+
+
+Basically a retention time based log deletion was triggered, so messages written to Kafka is deleted, then the test case hanged because it cannot receive expected messages. These logs proves the hypothesis made by   that the clock is skewed on producer side. We are still investigating the reason and will update the comment once we have progress. 
+
+ 
+
+I don't have the permission to change the state of this ticket.   Could you help to change it to in-progress? Thanks~ Thanks for the updates.
+
+I don't have the permission to change the state of this ticket.   Song Could you help to change it to in-progress? Thanks~ 
+
+Only the assignee can do it. There is a problem in jira that a `user` can be assigned to the ticket but cannot move it to in-progress, unless he/she is a `contributor`. I've grant you the `contributor` permission. You should be able to do it now.Here are my findings regarding why the timestamp of the produced record is more than 7 days earlier than the test time:
+
+1) KafkaWriter will explicitly assign the timestamp to the produced record, rather than using the system current time for the produced request &#91;1&#93;.
+2) The timestamp could be from the StreamRecord that fed to the   method, which in turn is determined by the caller of those method (e.g. SQL related logic).
+3) The code used to produce records in the testSourceSinkWithKeyAndPartialValue() explicitly assigns some timestamp with date such as 2020-03-08. This seems to be the only place where a non-current-system-time timestamp could be provided.
+
+My hypothesis is this:
+
+	The timestamp used in the test has been used as the timestamp of the records sent to Kafka.
+	The test will fail if and only if Kafka Server happens to trigger log retention logic (which is triggered at regularly time interval) after the records are produced but before the records have been consumed. This explains why the test is flaky.
+
+
+
+I would suggest to involve the developer who knows the expected behavior of the SQL/Table API tested by this test to validate the hypothesis described above.
+
+    Do you know who can help answer the SQL related questions? Thanks   for the investigation! Yes there are indeed some Kafka table test cases explicitly assigning record timestamp, such as this one&#91;1&#93;. These cases tests metadata column feature of Kafka sink table so I think we have to keep them. 
+
+I would suggest to disable log deletion by setting Kafka broker conf log.retention.ms to -1 in KafkaTableTestBase. This will prevent records from being delete. I can submit a patch to fix this. Thanks for the investigation,   and  .
+
+ , I think disabling log deletion is indeed one way to go. As a non-expert in Kafka, my question is would our IT cases may fail to capture potential problems that only happens when there's a regular log deletion, which IIUC is the default Kafka behavior.
+
+twalthr, fsk119, what do you think as the original authors?What's the default value of log.retention.ms?  jark The default value is 7 days. The problem is that some cases hard-coded the record timestamp (e.g. 2020-03-08, which is definitely beyond the retention timeout), so it's possible that these records are deleted by Kafka broker after being produced but before being consumed as   mentioned. 
+
+Maybe a better solution is using current timestamp in tests instead of hard-coding one. Changing the log.retention.ms indeed changes the default behavior of Kafka. Thanks   and   for the feedback.Thanks for the investigation.
+
+In the UpsertKafkaTableCase, we use the hard-coding timestamp to simplify the test(e.g. testTemporalJoin). I think it's okay to just turn off the log retention because users will not send out-of-date records in the production environment and they will not meet the problem.Hey fsk119, do you think it would be simpler to just change the timestamp used in the test to e.g. year 2030?
+
+I personally think this approach is better than disabling the log retention time. The reason is that we in general prefer the test to simulate the production environment, which do have the log retention in Kafka. I share the concern with   that, there might be potential problems that only happens when there's a regular log deletion.Sounds great. I think it's much better than turn off the log retention =-=. personally, I'm -1 to change the test data because
+
+1) it's hard to maintain, it's very trick to know which timestamp data should use a future time. See the pull request changes 136 lines, but there still some other timestamp not changed, not sure whether it changes all the necessary places. 
+2) it may still broken in the future, e.g. some one add a test but not use a long future timestamp (the test won't broken in a long time, and we need another round to investigate the problem when it fails). 
+3) I don't see big difference between changing the timestamp data and disabling log retention time. Is it common to insert 100 years later timestamp in production environment? 
+4) It seems we also changed some default configs for kafka tests, e.g. enable.auto.commit, auto.offset.reset in KafkaSinkITCase and KafkaWriterITCase.jark Thanks for pointing this out! To be honest I have no preference on these two options. Both of them have their pros and cons. I would suggest that we leave a descriptive comment around the change to make it easy to maintain for other developers.Fixed in master: Please reopen it if the problem happens again.Instance on 1.13: I've reopened the ticket and downgraded it to Critical. Please back port the fix to 1.12/1.13.Fixed in 
+
+	release-1.13: 
+The docker-based test is introduced in 1.13, so we may need another pull request for release-1.12. Could you help for that  ?",1
+"[FLINK-22198] KafkaTableITCase hang. I am the Flink Jira Bot and I help the community manage its development. I see this issues has been marked as a Blocker but is unassigned and neither itself nor its Sub-Tasks have been updated for 1 days. I have gone ahead and marked it ""stale-blocker"". If this ticket is a Blocker, please either assign yourself or give an update. Afterwards, please remove the label or in 7 days the issue will be deprioritized.
+Could you help look into this? It seems recent instances are no longer caused by the Testcontainers framework.I checked the log of latest 2 failure cases. I think this case has the same cause as FLINK-22416 as described in my comment. 
+
+I think we need more information for debugging, since Kafka is running in docker so I have no clue about what happened on broker side. I can submit a patch to log more information for debugging if the test fails.Thanks,  . 
+Adding more logs sounds good to me. I'm assigning you to this ticket for the moment. is another instance from my own Azure pipeline, which proved my assumption before in
+
+Basically I add a timer to print Kafka topic partition status if the test hangs for 5 minutes. And the log showed that the starting offset of the partition is not 0, so test hanged because it couldn't receive expected messages with offset 0-3.  
+
+
+19:54:22,603 [ Debug Logging Timer] INFO  org.apache.flink.streaming.connectors.kafka.table.KafkaTableITCase [] - TopicPartition ""key_partial_value_topic_avro-0"": starting offset: 4, stopping offset: 4
+
+
+I'm still investigating why this could happen on broker side. Here is a PR for redirecting KafkaContainer's output to log4j and printing log if test hangs:
+
+ The blocked stack of this issue is the same with FLINK-22387, I think they have same root cause. Thanks   for the investigation. 
+Add logs in master I have taken a look at the test code and related logs (not including the Kafka Server log). 
+
+Here are the findings:
+
+	According to the test code and the log, 5 minutes after the test starts, the logStartOffset=4 and the logEndOffset=4.
+	According to the Kafka Source code, the logStartOffset will increase from 0 to 4 only in the following cases:
+	The   is invoked by test code
+	The log rolling happens because the current_time - timestamp_of_produced_records &gt;= retention_time
+	The log rolling happens because the size of the log &gt; max_log_segment_size.
+
+
+
+My hypothesis is that the log rolling happens because the current_time - timestamp_of_produced_records &gt;= retention_time. This might happen if the clock on the host that produces messages is several days earlier than the clock on the host that runs the Kafka Server container. In general this difference in clock is unlikely, because I find it even less likely to believe other reasons that could have causes this logStartOffset=4.
+
+In order to validate the hypothesis and move forward in the debugging, we have updated Flink code to get Kafka Server info level logging and will check the following:
+
+	What is the timestamp of the producer and Kafka Server in the log?
+	Does Kafka Server actually roll the log, and what even has triggered the log rolling?  
+I think the latest instance occurred after the log changes being merged. Could you help take another look? ,
+BTW, please move the ticket to in-progress as we're investigating it.Thanks   for the reminder. I had a discussion with   and we checked the log of the latest instance. These logs caught our attention: 
+
+
+Basically a retention time based log deletion was triggered, so messages written to Kafka is deleted, then the test case hanged because it cannot receive expected messages. These logs proves the hypothesis made by   that the clock is skewed on producer side. We are still investigating the reason and will update the comment once we have progress. 
+
+ 
+
+I don't have the permission to change the state of this ticket.   Could you help to change it to in-progress? Thanks~ Thanks for the updates.
+
+I don't have the permission to change the state of this ticket.   Song Could you help to change it to in-progress? Thanks~ 
+
+Only the assignee can do it. There is a problem in jira that a `user` can be assigned to the ticket but cannot move it to in-progress, unless he/she is a `contributor`. I've grant you the `contributor` permission. You should be able to do it now.Here are my findings regarding why the timestamp of the produced record is more than 7 days earlier than the test time:
+
+1) KafkaWriter will explicitly assign the timestamp to the produced record, rather than using the system current time for the produced request &#91;1&#93;.
+2) The timestamp could be from the StreamRecord that fed to the   method, which in turn is determined by the caller of those method (e.g. SQL related logic).
+3) The code used to produce records in the testSourceSinkWithKeyAndPartialValue() explicitly assigns some timestamp with date such as 2020-03-08. This seems to be the only place where a non-current-system-time timestamp could be provided.
+
+My hypothesis is this:
+
+	The timestamp used in the test has been used as the timestamp of the records sent to Kafka.
+	The test will fail if and only if Kafka Server happens to trigger log retention logic (which is triggered at regularly time interval) after the records are produced but before the records have been consumed. This explains why the test is flaky.
+
+
+
+I would suggest to involve the developer who knows the expected behavior of the SQL/Table API tested by this test to validate the hypothesis described above.
+
+   Do you know who can help answer the SQL related questions?Thanks   for the investigation! Yes there are indeed some Kafka table test cases explicitly assigning record timestamp, such as this one&#91;1&#93;. These cases tests metadata column feature of Kafka sink table so I think we have to keep them. 
+
+I would suggest to disable log deletion by setting Kafka broker conf log.retention.ms to -1 in KafkaTableTestBase. This will prevent records from being delete. I can submit a patch to fix this. Thanks for the investigation,   and  .
+
+ , I think disabling log deletion is indeed one way to go. As a non-expert in Kafka, my question is would our IT cases may fail to capture potential problems that only happens when there's a regular log deletion, which IIUC is the default Kafka behavior.
+
+twalthr, fsk119, what do you think as the original authors?What's the default value of log.retention.ms?  jark The default value is 7 days. The problem is that some cases hard-coded the record timestamp (e.g. 2020-03-08, which is definitely beyond the retention timeout), so it's possible that these records are deleted by Kafka broker after being produced but before being consumed as   mentioned. 
+
+Maybe a better solution is using current timestamp in tests instead of hard-coding one. Changing the log.retention.ms indeed changes the default behavior of Kafka. Thanks   and   for the feedback.Thanks for the investigation.
+
+In the UpsertKafkaTableCase, we use the hard-coding timestamp to simplify the test(e.g. testTemporalJoin). I think it's okay to just turn off the log retention because users will not send out-of-date records in the production environment and they will not meet the problem.Hey fsk119, do you think it would be simpler to just change the timestamp used in the test to e.g. year 2030?
+
+I personally think this approach is better than disabling the log retention time. The reason is that we in general prefer the test to simulate the production environment, which do have the log retention in Kafka. I share the concern with   that, there might be potential problems that only happens when there's a regular log deletion. personally, I'm -1 to change the test data because
+
+1) it's hard to maintain, it's very trick to know which timestamp data should use a future time. See the pull request changes 136 lines, but there still some other timestamp not changed, not sure whether it changes all the necessary places. 
+2) it may still broken in the future, e.g. some one add a test but not use a long future timestamp (the test won't broken in a long time, and we need another round to investigate the problem when it fails). 
+3) I don't see big difference between changing the timestamp data and disabling log retention time. Is it common to insert 100 years later timestamp in production environment? 
+4) It seems we also changed some default configs for kafka tests, e.g. enable.auto.commit, auto.offset.reset in KafkaSinkITCase and KafkaWriterITCase.jark Thanks for pointing this out! To be honest I have no preference on these two options. Both of them have their pros and cons. I would suggest that we leave a descriptive comment around the change to make it easy to maintain for other developers.Fixed in master: Please reopen it if the problem happens again.Instance on 1.13:I've reopened the ticket and downgraded it to Critical. Please back port the fix to 1.12/1.13.Fixed in 
+The docker-based test is introduced in 1.13, so we may need another pull request for release-1.12. Could you help for that  ?",1
+Migrate ComponentFactory to the new Factory stackFixed in 1.14.0: commit Migrate PlannerFactory to Factory,1
+"KafkaTableITCase hang.I am the Flink Jira Bot and I help the community manage its development. I see this issues has been marked as a Blocker but is unassigned and neither itself nor its Sub-Tasks have been updated for 1 days. I have gone ahead and marked it ""stale-blocker"". If this ticket is a Blocker, please either assign yourself or give an update. Afterwards, please remove the label or in 7 days the issue will be deprioritized.
+Could you help look into this? It seems recent instances are no longer caused by the Testcontainers framework.I checked the log of latest 2 failure cases. I think this case has the same cause as FLINK-22416 as described in my comment. 
+
+I think we need more information for debugging, since Kafka is running in docker so I have no clue about what happened on broker side. I can submit a patch to log more information for debugging if the test fails.Thanks,  . 
+Adding more logs sounds good to me. I'm assigning you to this ticket for the moment.is another instance from my own Azure pipeline, which proved my assumption before in:
+
+Basically I add a timer to print Kafka topic partition status if the test hangs for 5 minutes. And the log showed that the starting offset of the partition is not 0, so test hanged because it couldn't receive expected messages with offset 0-3.  
+
+
+19:54:22,603 [ Debug Logging Timer] INFO  org.apache.flink.streaming.connectors.kafka.table.KafkaTableITCase [] - TopicPartition ""key_partial_value_topic_avro-0"": starting offset: 4, stopping offset: 4
+
+
+I'm still investigating why this could happen on broker side. Here is a PR for redirecting KafkaContainer's output to log4j and printing log if test hangs
+
+ The blocked stack of this issue is the same with FLINK-22387, I think they have same root cause. Thanks   for the investigation. Add logs in master I have taken a look at the test code and related logs (not including the Kafka Server log). 
+
+Here are the findings:
+
+	According to the test code and the log, 5 minutes after the test starts, the logStartOffset=4 and the logEndOffset=4.
+	According to the Kafka Source code, the logStartOffset will increase from 0 to 4 only in the following cases:
+	The is invoked by test code
+	The log rolling happens because the current_time retention_time
+	The log rolling happens because the size of the log &gt; max_log_segment_size.
+
+
+
+My hypothesis is that the log rolling happens because the current_time retention_time. This might happen if the clock on the host that produces messages is several days earlier than the clock on the host that runs the Kafka Server container. In general this difference in clock is unlikely, because I find it even less likely to believe other reasons that could have causes this logStartOffset=4.
+
+In order to validate the hypothesis and move forward in the debugging, we have updated Flink code to get Kafka Server info level logging and will check the following:
+
+	What is the timestamp of the producer and Kafka Server in the log?
+	Does Kafka Server actually roll the log, and what even has triggered the log rolling?
+I think the latest instance occurred after the log changes being merged. Could you help take another look? ,
+BTW, please move the ticket to in-progress as we're investigating it.Thanks   for the reminder. I had a discussion with  we checked the log of the latest instance. These logs caught our attention: 
+
+
+Basically a retention time based log deletion was triggered, so messages written to Kafka is deleted, then the test case hanged because it cannot receive expected messages. These logs proves the hypothesis made by   that the clock is skewed on producer side. We are still investigating the reason and will update the comment once we have progress. 
+
+I don't have the permission to change the state of this ticket.   Could you help to change it to in-progress? Thanks~ Thanks for the updates.
+
+I don't have the permission to change the state of this ticket.   Song Could you help to change it to in-progress? Thanks~ 
+
+Only the assignee can do it. There is a problem in jira that a `user` can be assigned to the ticket but cannot move it to in-progress, unless he/she is a `contributor`. I've grant you the `contributor` permission. You should be able to do it now.Here are my findings regarding why the timestamp of the produced record is more than 7 days earlier than the test time:
+
+1) KafkaWriter will explicitly assign the timestamp to the produced record, rather than using the system current time for the produced request &#91;1&#93;.
+2) The timestamp could be from the StreamRecord that fed to the method, which in turn is determined by the caller of those method (e.g. SQL related logic).
+3) The code used to produce records in the explicitly assigns some timestamp with date such as 2020-03-08. This seems to be the only place where a non-current-system-time timestamp could be provided.
+
+My hypothesis is this:
+
+	The timestamp used in the test has been used as the timestamp of the records sent to Kafka.
+	The test will fail if and only if Kafka Server happens to trigger log retention logic (which is triggered at regularly time interval) after the records are produced but before the records have been consumed. This explains why the test is flaky.
+
+
+
+I would suggest to involve the developer who knows the expected behavior of the SQL/Table API tested by this test to validate the hypothesis described above.
+
+    Do you know who can help answer the SQL related questions?Thanks   for the investigation! Yes there are indeed some Kafka table test cases explicitly assigning record timestamp, such as this one&#91;1&#93;. These cases tests metadata column feature of Kafka sink table so I think we have to keep them. 
+
+I would suggest to disable log deletion by setting Kafka broker conf log.retention.ms to -1 in KafkaTableTestBase. This will prevent records from being delete. I can submit a patch to fix this. Thanks for the investigation,   and  .
+
+ , I think disabling log deletion is indeed one way to go. As a non-expert in Kafka, my question is would our IT cases may fail to capture potential problems that only happens when there's a regular log deletion, which IIUC is the default Kafka behavior.
+
+twalthr, fsk119, what do you think as the original authors?What's the default value of log.retention.ms?  jark The default value is 7 days. The problem is that some cases hard-coded the record timestamp (e.g. 2020-03-08, which is definitely beyond the retention timeout), so it's possible that these records are deleted by Kafka broker after being produced but before being consumed as   mentioned. 
+
+Maybe a better solution is using current timestamp in tests instead of hard-coding one. Changing the log.retention.ms indeed changes the default behavior of Kafka. Thanks   and   for the feedback.Thanks for the investigation.
+
+In the UpsertKafkaTableCase, we use the hard-coding timestamp to simplify the test(e.g. testTemporalJoin). I think it's okay to just turn off the log retention because users will not send out-of-date records in the production environment and they will not meet the problem.Hey fsk119, do you think it would be simpler to just change the timestamp used in the test to e.g. year 2030?
+
+I personally think this approach is better than disabling the log retention time. The reason is that we in general prefer the test to simulate the production environment, which do have the log retention in Kafka. I share the concern with   that, there might be potential problems that only happens when there's a regular log deletion personally, I'm -1 to change the test data because
+
+1) it's hard to maintain, it's very trick to know which timestamp data should use a future time. See the pull request changes 136 lines, but there still some other timestamp not changed, not sure whether it changes all the necessary places. 
+2) it may still broken in the future, e.g. some one add a test but not use a long future timestamp (the test won't broken in a long time, and we need another round to investigate the problem when it fails). 
+3) I don't see big difference between changing the timestamp data and disabling log retention time. Is it common to insert 100 years later timestamp in production environment? 
+4) It seems we also changed some default configs for kafka tests, e.g. enable.auto.commit, auto.offset.reset in KafkaSinkITCase and KafkaWriterITCase.jark Thanks for pointing this out! To be honest I have no preference on these two options. Both of them have their pros and cons. I would suggest that we leave a descriptive comment around the change to make it easy to maintain for other developers.Fixed in master: Please reopen it if the problem happens again.Instance on 1.13: I've reopened the ticket and downgraded it to Critical. Please back port the fix to 1.12/1.13.Fixed in 
+
+	release-1.13:
+The docker-based test is introduced in 1.13, so we may need another pull request for release-1.12. Could you help for that  ?",1
+"[FLINK-22198] KafkaTableITCase hang. am the Flink Jira Bot and I help the community manage its development. I see this issues has been marked as a Blocker but is unassigned and neither itself nor its Sub-Tasks have been updated for 1 days. I have gone ahead and marked it ""stale-blocker"". If this ticket is a Blocker, please either assign yourself or give an update. Afterwards, please remove the label or in 7 days the issue will be deprioritized.
+Could you help look into this? It seems recent instances are no longer caused by the Testcontainers framework.I checked the log of latest 2 failure cases. I think this case has the same cause as FLINK-22416 as described in my comment. 
+
+I think we need more information for debugging, since Kafka is running in docker so I have no clue about what happened on broker side. I can submit a patch to log more information for debugging if the test fails.Thanks,  . 
+Adding more logs sounds good to me. I'm assigning you to this ticket for the moment. is another instance from my own Azure pipeline, which proved my assumption before in FLINK-22146:
+
+Basically I add a timer to print Kafka topic partition status if the test hangs for 5 minutes. And the log showed that the starting offset of the partition is not 0, so test hanged because it couldn't receive expected messages with offset 0-3.  
+
+
+19:54:22,603 [ Debug Logging Timer] INFO  org.apache.flink.streaming.connectors.kafka.table.KafkaTableITCase [] - TopicPartition ""key_partial_value_topic_avro-0"": starting offset: 4, stopping offset: 4
+
+
+I'm still investigating why this could happen on broker side. Here is a PR for redirecting KafkaContainer's output to log4j and printing log if test hangs:
+
+ The blocked stack of this issue is the same with FLINK-22387, I think they have same root cause. Thanks   for the investigation. logs in master have taken a look at the test code and related logs (not including the Kafka Server log). 
+
+Here are the findings:
+
+	According to the test code and the log, 5 minutes after the test starts, the logStartOffset=4 and the logEndOffset=4.
+	According to the Kafka Source code, the logStartOffset will increase from 0 to 4 only in the following cases:
+	The   is invoked by test code
+	The log rolling happens because the current_time - timestamp_of_produced_records &gt;= retention_time
+	The log rolling happens because the size of the log &gt; max_log_segment_size.
+
+
+
+My hypothesis is that the log rolling happens because the current_time - timestamp_of_produced_records &gt;= retention_time. This might happen if the clock on the host that produces messages is several days earlier than the clock on the host that runs the Kafka Server container. In general this difference in clock is unlikely, because I find it even less likely to believe other reasons that could have causes this logStartOffset=4.
+
+In order to validate the hypothesis and move forward in the debugging, we have updated Flink code to get Kafka Server info level logging and will check the following:What is the timestamp of the producer and Kafka Server in the log? Does Kafka Server actually roll the log, and what even has triggered the log rolling?  
+I think the latest instance occurred after the log changes being merged. Could you help take another look? ,
+BTW, please move the ticket to in-progress as we're investigating it.Thanks   for the reminder. I had a discussion with   and we checked the log of the latest instance. These logs caught our attention:
+
+
+Basically a retention time based log deletion was triggered, so messages written to Kafka is deleted, then the test case hanged because it cannot receive expected messages. These logs proves the hypothesis made by   that the clock is skewed on producer side. We are still investigating the reason and will update the comment once we have progress. 
+
+ 
+
+I don't have the permission to change the state of this ticket.   Could you help to change it to in-progress? Thanks~ Thanks for the updates.
+
+I don't have the permission to change the state of this ticket.   Song Could you help to change it to in-progress? Thanks~ Only the assignee can do it. There is a problem in jira that a `user` can be assigned to the ticket but cannot move it to in-progress, unless he/she is a `contributor`. I've grant you the `contributor` permission. You should be able to do it now.Here are my findings regarding why the timestamp of the produced record is more than 7 days earlier than the test time:
+
+1) KafkaWriter will explicitly assign the timestamp to the produced record, rather than using the system current time for the produced request.
+2) The timestamp could be from the StreamRecord that fed to the   method, which in turn is determined by the caller of those method (e.g. SQL related logic).
+3) The code used to produce records in the explicitly assigns some timestamp with date such as 2020-03-08. This seems to be the only place where a non-current-system-time timestamp could be provided.
+
+My hypothesis is this: he timestamp used in the test (e.g. 2020-03-08) has been used as the timestamp of the records sent to Kafka. The test will fail if and only if Kafka Server happens to trigger log retention logic (which is triggered at regularly time interval) after the records are produced but before the records have been consumed. This explains why the test is flaky.
+
+
+
+I would suggest to involve the developer who knows the expected behavior of the SQL/Table API tested by this test to validate the hypothesis described above.
+
+    Do you know who can help answer the SQL related questions? Thanks   for the investigation! Yes there are indeed some Kafka table test cases explicitly assigning record timestamp, such as this one&#91;1&#93;. These cases tests metadata column feature of Kafka sink table so I think we have to keep them. 
+
+I would suggest to disable log deletion by setting Kafka broker conf log.retention.ms to -1 in KafkaTableTestBase. This will prevent records from being delete. I can submit a patch to fix this. Thanks for the investigation,   and  .  , I think disabling log deletion is indeed one way to go. As a non-expert in Kafka, my question is would our IT cases may fail to capture potential problems that only happens when there's a regular log deletion, which IIUC is the default Kafka behavior. what do you think as the original authors?What's the default value of log.retention.ms?  jark The default value is 7 days. The problem is that some cases hard-coded the record timestamp (e.g. 2020-03-08, which is definitely beyond the retention timeout), so it's possible that these records are deleted by Kafka broker after being produced but before being consumed as   mentioned. Maybe a better solution is using current timestamp in tests instead of hard-coding one. Changing the log.retention.ms indeed changes the default behavior of Kafka. Thanks   and   for the feedback.Thanks for the investigation. In the UpsertKafkaTableCase, we use the hard-coding timestamp to simplify the test(e.g. testTemporalJoin). I think it's okay to just turn off the log retention because users will not send out-of-date records in the production environment and they will not meet the problem.Hey fsk119, do you think it would be simpler to just change the timestamp used in the test to e.g. year 2030? I personally think this approach is better than disabling the log retention time. The reason is that we in general prefer the test to simulate the production environment, which do have the log retention in Kafka. I share the concern with   that, there might be potential problems that only happens when there's a regular log deletion. great. I think it's much better than turn off the log retention =-=.   , personally, I'm -1 to change the test data because
+
+1) it's hard to maintain, it's very trick to know which timestamp data should use a future time. See the pull request changes 136 lines, but there still some other timestamp not changed, not sure whether it changes all the necessary places. 
+2) it may still broken in the future, e.g. some one add a test but not use a long future timestamp (the test won't broken in a long time, and we need another round to investigate the problem when it fails). 
+3) I don't see big difference between changing the timestamp data and disabling log retention time. Is it common to insert 100 years later timestamp in production environment? 
+4) It seems we also changed some default configs for kafka tests, e.g. enable.auto.commit, auto.offset.reset in KafkaSinkITCase and KafkaWriterITCase.jark Thanks for pointing this out! To be honest I have no preference on these two options. Both of them have their pros and cons. I would suggest that we leave a descriptive comment around the change to make it easy to maintain for other developers.Fixed in master: Please reopen it if the problem happens again.Instance on 1.13 've reopened the ticket and downgraded it to Critical. Please back port the fix to 1.12/1.13.Fixed in release-1.13: The docker-based test is introduced in 1.13, so we may need another pull request for release-1.12. Could you help for that  ?",1
+"Add Hive SQL E2E testThere seems to be a JIRA covering this. We are still finding resources to do the work. It seems only covers hive connector, but this issue also covers metadata, calling function and so on. Could you help confirm whether we still target at completing this work in 1.10.0? Thanks. We will try to do this in 1.10PR: will continue to develop it, can you assign this ticket to him?Thanks for the confirmation and efforts!
+
+Please change the status to ""In-Progress"" accordingly, thanks.hi liyu I didn't have the permission to change the status, can you help change the status?I'd like to help but only assignee of the issue could update the status. Could you try the ""Start Progress"" button right under the JIRA title, next to ""Resolve Issue""? Thanks.Actually, I was also interested in implementing this issue finally. But feel free to take it. It would be great if we can test the following behavior: Read from Hive catalog and source (a table that contains all supported data types) Use a view Load a module with built in functions Use a catalog function and built-in function in a query write to sink is right. Unfortunately, without E2E test, we can only test it manually, and we have found some bugs. If the test time is controllable. Let me add a few points. Multi-version, unfortunately, we don't have multi-version tests in mvn build now, user's hive version maybe 1.X and 2.X and 3.X, we can pick one version in a big version separately. Multi-format for read and write, at least, it is better to cover textfile/orc/parquet. Writing by Hive, Reading by Flink; Writing by Flink, Reading by Hive. Including partition support. 
+This issue is assigned but has not received an update in 7 days so it has been labeled ""stale-assigned"". If you are still working on the issue, please give an update and remove the label. If you are no longer working on the issue, please unassign so someone else may work on it. In 7 days the issue will be automatically unassigned.As part of the ""Test"" Issue Type is removed. I migrated this one to ""Technical Debt"". If you think, this should rather be an ""Improvement"" or ""New Feature"", feel free to change the type. This issue was marked ""stale-assigned"" 7 ago and has not received an update. I have automatically removed the current assignee from the issue so others in the community may pick it up. If you are still working on this ticket, please ask a committer to reassign you and provide an update about your current status.I am the Flink Jira Bot and I help the community manage its development. I see this issues has been marked as Major but is unassigned and neither itself nor its Sub-Tasks have been updated for 30 days. I have gone ahead and added a ""stale-major"" to the issue"". If this ticket is a Major, please either assign yourself or give an update. Afterwards, please remove the label or in 7 days the issue will be deprioritized.This issue was labeled ""stale-major"" 7 days ago and has not received any updates so it is being deprioritized. If this ticket is actually Major, please raise the priority and ask a committer to assign you the issue or revive the public discussion. an  ",1
+"ignored (manual) tests in YARNSessionFIFOITCase do not run anymoresimilarly for YARNSessionFIFOITCase#testResourceComputationWe looked at the issue as part of the Engine team's backlog grooming. We decided to remove the two testcases: There is no point in having them if they are ignored constantly because of the memory consumption. They are not maintained due to them being @Ignored
+This issue and all of its Sub-Tasks have not been updated for 180 days. So, it has been labeled ""stale-minor"". If you are still affected by this bug or are still interested in this issue, please give an update and remove the label. In 7 days the issue will be closed automatically.This issue has been labeled ""stale-minor"" for 7 days. It is closed now. If you are still affected by this or would like to raise the priority of this ticket please re-open, removing the label ""auto-closed"" and raise the ticket priority accordingly.Re-opening in accordance with",1
+Port Scala code in flink-rpc-akka to Javamaster:,1
+Remove JobVertex#connectIdInputDone via,1
+"Update CI docker image to latest java version (1.8.0_292)This is supposed to fail: Once the blocking ticket is resolved, I'll rebase the PR.FYI: has been merged. Thanks a lot! Merged to master in",1
+"Upgrade Checkstyle to at least 8.29I've tried to perform the upgrade myself, but the newer Checkstyle version also returns checkstyle errors. For example: There are probably more errors that need to be fixed or excluded",1
+Make the TaskExecutor not depend on concrete BlobServiceCache implementationFixed via ,1
+"Streamline E2E surefire configuration setupWould you mind share the link to the currently in-progress branch ?  I want to learn how to enable Pulsar E2E tests as described here. Thank you !I just opened a PR, you can base it on that.master: ",1
+"YARNFileReplicationITCase.testPerJobModeWithDefaultFileReplicationhxbks2ks I checked in master. Both test cases of YARNFileReplicationITCase have passed. How can I reprocess the error?This is probably a rare test failure. Have you checked the logs uploaded to Azure to understand why it failed on CI? The log in Azure is exactly the same as what is reported in the ticket. Is there a way for me to access more environment info in Azure container? Looks like the issue doesn't happen in each build. Do you have any suggestions to debug in the azure environment?hpeter The frequency of this test case is not high, you can trigger it by multiple push in Private Azure Pipeline. Regarding the method of Debugging in Azure Pipeline, I only know the way of printing logs.hpeter, Is this related to the Azure environment? If not, one thing you can try is to loop this locally in IDE. IntelliJ has a feature to repeat a test until failure. If this is related to the Azure environment, the only thing I can think of is to modify the azure test scripts to only run/repeat this single test case. Unfortunately, I don't find any docs instructing how to do that, you may need to look into `azure-pipelines.yml` and `tools/azure-pipelines/`. song hxbks2ks
+Tried run the test class 100 times in IntelliJ, none of them failed. I will try to change the azure-pipelines to run/repeat this single test.New instance: did you have luck reproducing the problem? failed on 1.11 as well:
+I am not able to reproduce locally yet. For changing azure-pipeline, I haven't got the chance to work on it now.
+This issue is assigned but has not received an update in 7 days so it has been labeled ""stale-assigned"". If you are still working on the issue, please give an update and remove the label. If you are no longer working on the issue, please unassign so someone else may work on it. In 7 days the issue will be automatically unassigned.another cases issue was marked ""stale-assigned"" 7 ago and has not received an update. I have automatically removed the current assignee from the issue so others in the community may pick it up. If you are still working on this ticket, please ask a committer to reassign you and provide an update about your current status.I am the Flink Jira Bot and I help the community manage its development. I see this issues has been marked as Major but is unassigned and neither itself nor its Sub-Tasks have been updated for 30 days. I have gone ahead and added a ""stale-major"" to the issue"". If this ticket is a Major, please either assign yourself or give an update. Afterwards, please remove the label or in 7 days the issue will be deprioritized.This issue was labeled ""stale-major"" 7 ago and has not received any updates so it is being deprioritized. If this ticket is actually Major, please raise the priority and ask a committer to assign you the issue or revive the public discussion.Would you like to take a look at this issue at your convenience?  Just finishing a relatively big task and intended to have a look.
+As I see this is a rare bug so hopefully I can reproduce it.gaborgsomogyi Thanks a lot for offering your help! Wish you good luck to reproduce this problem I think the problem could be that we are looking for the Flink dist jar after the job has terminated. This also means that we are looking for this file while Yarn will clean up the directory of the submitted Yarn application. Hence, I think we are looking at a classic race condition. I'll try to verify this suspicion.Thanks for checking it too, added my findings to the PR. I think we're on track Fixed via",1
+Remove TTL from e2e cachemaster,1

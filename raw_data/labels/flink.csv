@@ -1,0 +1,151 @@
+issue,rating,date,note
+FLINK-10000 ,0,19.02.2022,
+FLINK-10002 ,0,19.02.2022,Feature request
+FLINK-10005 ,0,19.02.2022,
+FLINK-10006 ,0,19.02.2022,
+FLINK-10008 ,0,19.02.2022,Feature request
+FLINK-10009 ,0,19.02.2022,Incorrect functionality
+FLINK-10273 ,1,19.02.2022,Design limitation
+FLINK-1002 ,0,19.02.2022,
+FLINK-10022 ,0,19.02.2022,Feature request
+FLINK-12350 ,0,19.02.2022,
+FLINK-10045 ,0,19.02.2022,
+FLINK-10051 ,1,19.02.2022,Design limitation
+FLINK-10059 ,0,19.02.2022,Feature request
+FLINK-1006 ,0,19.02.2022,
+FLINK-10063 ,1,19.02.2022,Design issue
+FLINK-10064 ,0,19.02.2022,Incorrect functionality
+FLINK-13962 ,1,19.02.2022,Design limitation
+FLINK-10068 ,0,19.02.2022,
+FLINK-10069 ,0,19.02.2022,
+FLINK-1007 ,1,19.02.2022,Refactoring discussion
+FLINK-10070 ,1,19.02.2022,Design limitation
+FLINK-10071 ,0,19.02.2022,
+FLINK-10073 ,0,19.02.2022,Feature request
+FLINK-10074 ,0,19.02.2022,
+FLINK-1008 ,1,19.02.2022,?lengthy architecture or design discussions?
+FLINK-10082 ,1,19.02.2022,Design issue
+FLINK-10094 ,1,19.02.2022,Design issue
+FLINK-10095 ,0,19.02.2022,
+FLINK-10101 ,0,19.02.2022,Incorrect functionality
+FLINK-10116 ,1,19.02.2022,Design issue
+FLINK-10119 ,0,19.02.2022,
+FLINK-10122 ,0,19.02.2022,Feature request
+FLINK-10123 ,1,19.02.2022,Design limitation
+FLINK-10126 ,0,19.02.2022,
+FLINK-10127 ,0,19.02.2022,Feature request
+FLINK-10131 ,0,19.02.2022,
+FLINK-10132 ,0,19.02.2022,
+FLINK-10322 ,1,19.02.2022,Design issue
+FLINK-10136 ,0,19.02.2022,
+FLINK-10137 ,0,19.02.2022,
+FLINK-10139 ,1,19.02.2022,Updating tests
+FLINK-10142 ,1,19.02.2022,Design issue
+FLINK-10144 ,1,19.02.2022,Talks about refactoring
+FLINK-10145 ,0,19.02.2022,
+FLINK-10153 ,1,19.02.2022,Design limitation
+FLINK-10154 ,0,19.02.2022,
+FLINK-10156 ,1,19.02.2022,Design limitation
+FLINK-10157 ,0,19.02.2022,
+FLINK-10159 ,1,19.02.2022,Design issue
+FLINK-10162 ,0,20.02.2022,Feature request
+FLINK-10231 ,0,20.02.2022,
+FLINK-10168 ,0,20.02.2022,
+FLINK-10170 ,1,20.02.2022,Design issue
+FLINK-10172 ,0,20.02.2022,Incorrect functionality
+FLINK-10174 ,1,20.02.2022,"Design issue, ?it may depend on..?"
+FLINK-23886 ,0,20.02.2022,Incorrect functionality
+FLINK-10179 ,0,20.02.2022,
+FLINK-10185 ,1,20.02.2022,Talks about refactoring architecture
+FLINK-10186 ,0,20.02.2022,
+FLINK-10189 ,0,20.02.2022,
+FLINK-1019 ,1,20.02.2022,"Design limitation, ?Rework?"
+FLINK-10190 ,0,20.02.2022,
+FLINK-10193 ,0,20.02.2022,
+FLINK-10198 ,0,20.02.2022,
+FLINK-10201 ,1,20.02.2022,Design issue
+FLINK-10204 ,1,20.02.2022,Design limitation
+FLINK-10207 ,0,20.02.2022,
+FLINK-10208 ,1,20.02.2022,Upgrading will fix ?various API incompatibilities?
+FLINK-10213 ,0,20.02.2022,
+FLINK-10215 ,0,20.02.2022,
+FLINK-10218 ,0,20.02.2022,Feature request
+FLINK-10220 ,0,20.02.2022,
+FLINK-10222 ,1,20.02.2022,"Design issue, ?Will cause many collisions...?"
+FLINK-10223 ,0,20.02.2022,
+FLINK-10227 ,1,20.02.2022,Talks about refactoring
+FLINK-10229 ,0,20.02.2022,Feature request
+FLINK-10233 ,0,20.02.2022,
+FLINK-10234 ,0,20.02.2022,
+FLINK-10235 ,0,20.02.2022,
+FLINK-10243 ,1,20.02.2022,Design limitation
+FLINK-1025 ,1,20.02.2022,Talks about refactoring
+FLINK-10718 ,0,20.02.2022,
+FLINK-10252 ,1,20.02.2022,Design limitation
+FLINK-10253 ,0,20.02.2022,
+FLINK-10254 ,0,20.02.2022,
+FLINK-10311 ,0,20.02.2022,
+FLINK-10258 ,0,20.02.2022,Incorrect functionality
+FLINK-10259 ,0,20.02.2022,
+FLINK-10260 ,1,20.02.2022,Design issue
+FLINK-10261 ,1,20.02.2022,Design limitation
+FLINK-10263 ,0,20.02.2022,Incorrect functionality
+FLINK-10267 ,1,20.02.2022,Talks about refactoring
+FLINK-10271 ,0,20.02.2022,
+FLINK-10270 ,0,20.02.2022,
+FLINK-10273 ,1,20.02.2022,Design limitation
+FLINK-10275 ,1,20.02.2022,Design limitation
+FLINK-10279 ,1,20.02.2022,Design issue
+FLINK-10283 ,0,20.02.2022,
+FLINK-10289 ,0,20.02.2022,Feature request
+FLINK-12381 ,0,20.02.2022,
+FLINK-10771 ,1,20.02.2022,Refactoring hard code
+FLINK-10293 ,0,20.02.2022,Incorrect functionality
+FLINK-10515 ,0,20.02.2022,
+FLINK-10298 ,1,20.02.2022,Design issue discussion
+FLINK-10301 ,0,20.02.2022,Feature request
+FLINK-10304 ,0,20.02.2022,
+FLINK-10310 ,0,20.02.2022,
+FLINK-10311 ,0,20.02.2022,
+FLINK-10312 ,0,20.02.2022,Incorrect functionality
+FLINK-10314 ,1,20.02.2022,Design issue
+FLINK-10316 ,1,20.02.2022,"Design issue, ?underlying problem wasn��t entirely fixed?"
+FLINK-10319 ,0,20.02.2022,
+FLINK-10324 ,1,20.02.2022,Design issue
+FLINK-10326 ,1,20.02.2022,Talks about refactoring
+FLINK-10327 ,0,20.02.2022,Feature request
+FLINK-10329 ,0,20.02.2022,
+FLINK-10331 ,1,20.02.2022,"Design limitation, ?with re-design...?"
+FLINK-10339 ,0,20.02.2022,
+FLINK-10384 ,0,20.02.2022,
+FLINK-10341 ,0,20.02.2022,Feature request
+FLINK-10342 ,1,20.02.2022,Design issue
+FLINK-10349 ,1,20.02.2022,"Design limitations, ?legacy code?"
+FLINK-10355 ,0,20.02.2022,
+FLINK-10356 ,0,20.02.2022,
+FLINK-10358 ,0,20.02.2022,
+FLINK-10359 ,1,20.02.2022,Outdated docs
+FLINK-10365 ,1,20.02.2022,Talks about refactoring
+FLINK-10367 ,1,20.02.2022,Discussion about design limitation
+FLINK-10369 ,0,20.02.2022,
+FLINK-10371 ,0,20.02.2022,
+FLINK-10375 ,0,20.02.2022,
+FLINK-10377 ,0,20.02.2022,
+FLINK-10378 ,0,20.02.2022,
+FLINK-10379 ,1,20.02.2022,"Design issue, ?removed sometime ago and now impossible to use?"
+FLINK-10380 ,0,20.02.2022,
+FLINK-10383 ,1,20.02.2022,Design issue
+FLINK-10384 ,0,20.02.2022,
+FLINK-10386 ,1,20.02.2022,"Design issue, ?remove legacy...?"
+FLINK-10389 ,0,20.02.2022,
+FLINK-10393 ,1,20.02.2022,"Design issue, ?remove legacy...?"
+FLINK-10394 ,1,20.02.2022,"Design issue, ?remove legacy...?"
+FLINK-10396 ,1,20.02.2022,"Design issue, ?remove legacy...?"
+FLINK-10399 ,1,20.02.2022,"Design limitation, ?refactor?"
+FLINK-1040 ,0,20.02.2022,
+FLINK-10400 ,0,20.02.2022,
+FLINK-10401 ,0,20.02.2022,
+FLINK-10402 ,0,20.02.2022,
+FLINK-10415 ,1,20.02.2022,Design issue
+FLINK-10405 ,0,20.02.2022,
+FLINK-10406,1,24.02.2022,Design limitation

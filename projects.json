@@ -1,0 +1,91 @@
+{
+    "flink": [
+        {
+            "path": "raw_data/Jira/Flink/",
+            "comment_regex": "comments\\\/comment\\\/\\d*\\\/__text",
+            "columns": [
+                "title", "description", "key/__text", "type/__text",
+                "status/__text", "resolution/__text", "created", "resolved" 
+            ],
+            "column_renames": [
+                {"key/__text": "key"},
+                {"type/__text": "type"},
+                {"status/__text": "status"},
+                {"resolution/__text": "resolution"}
+            ],
+            "repository": "raw_data/Github/pull_requests/flink_pulls.json"    
+        }
+    ],
+    "beam": [
+        {
+            "path": "raw_data/Jira/Beam/",
+            "comment_regex": "comments\\\/comment\\\/\\d*\\\/__text",
+            "columns": [
+                "title", "description", "key/__text", "type/__text",
+                "status/__text", "resolution/__text", "created", "resolved"
+            ],
+            "column_renames": [
+                {"key/__text": "key"},
+                {"status/__text": "status"},
+                {"type/__text": "type"},
+                {"resolution/__text": "resolution"}
+            ],
+            "repository": "raw_data/Github/pull_requests/beam_pulls.json"
+        }
+    ],
+    "wildfly": [
+        {
+            "path": "raw_data/Jira/Wildfly/",
+            "comment_regex": "comments\\\/comment\\\/\\d*\\\/__text",
+            "columns": [
+                "title", "description", "key/__text", "type/__text",
+                "statusCategory/_key", "resolution/__text", "created", "resolved"
+            ],
+            "column_renames": [
+                {"key/__text": "key"},
+                {"type/__text": "type"},
+                {"statusCategory/_key": "status"},
+                {"resolution/__text": "resolution"}
+            ],
+            "repository": "raw_data/Github/pull_requests/wildfly_pulls.json"
+        }
+    ],
+    "sakai": [
+        {
+            "path": "raw_data/Jira/Sakai/",
+            "comment_regex": "comments\\\/comment\\\/\\d*\\\/__text",
+            "columns": [
+                "title", "description", "key/__text", "type/__text",
+                "status/__text", "resolution/__text", "created", "resolved"
+            ],
+            "column_renames": [
+                {"key/__text": "key"},
+                {"type/__text": "type"},
+                {"status/__text": "status"},
+                {"resolution/__text": "resolution"}
+            ],
+            "repository": "raw_data/Github/pull_requests/sakai_pulls.json"
+        }
+    ],
+    "wiredtiger": [
+        {
+            "path": "raw_data/Jira/WiredTiger/",
+            "comment_regex": "Comment",
+            "columns": [
+                "Summary", "Issue key", "Issue Type", "Status", 
+                "Project description", "Resolution", "Created", "Resolved"
+            ],
+            "column_renames": [
+                {"Summary": "title"},
+                {"Issue key": "key"},
+                {"Issue Type": "type"},
+                {"Status": "status"},
+                {"Project description": "description"},
+                {"Resolution": "resolution"},
+                {"Created": "created"},
+                {"Resolved": "resolved"}
+            ],
+            "repository": "raw_data/Github/pull_requests/wiredtiger_pulls.json"
+        }
+    ]
+}
